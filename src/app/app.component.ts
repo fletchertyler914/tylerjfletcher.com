@@ -30,16 +30,50 @@ export class AppComponent implements OnInit {
                     $('.typed-cursor').css("display","none");
                     $(".intro_element").css("text-decoration", "underline")
                     $('.delay').css("display","inline-block");
-                    fill_bio_element();
+                    fill_bio_about_me();
                 },1000)
             },
           });
         
-        function fill_bio_element(){
+        function fill_bio_about_me(){
             $(".bio_element").typed({
                 showCursor: false,
-                stringsElement: $('#typed-strings')
-            });
+                stringsElement: $('#typed-about-me'),
+                callback: function() {                    
+                    setTimeout(function(){
+                        $(".bio_element").typed({strings: [""], showCursor: false,});
+                        setTimeout(function(){
+                            fill_bio_work_history();
+                        },1000)
+                    },2000)
+                }
+            })
         }
+        
+        function fill_bio_work_history(){
+            $(".bio_element").typed({
+                showCursor: false,
+                stringsElement: $('#typed-work'),
+                callback: function() {                    
+                    setTimeout(function(){
+                        $(".bio_element").typed({strings: [""], showCursor: false,});
+                        setTimeout(function(){
+                            fill_bio_social();
+                        },1000)
+                    },2000)
+                }
+            })
+        }
+        
+        function fill_bio_social(){
+            $(".bio_element").typed({
+                showCursor: false,
+                stringsElement: $('#typed-social'),
+                callback: function() {                    
+                
+                }
+            })
+        }
+        
     }
 }
