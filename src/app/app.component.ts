@@ -14,8 +14,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent implements OnInit {
 
     public ngOnInit() {
-        $('.delay').css("display","none");
-        
+        $('.delay').css("display","none"); 
         $(".intro_element").typed({
             strings: ["Hello! ^1000", "I'm Tyler."],
             startDelay: 1000,
@@ -69,8 +68,9 @@ export class AppComponent implements OnInit {
             $(".bio_element").typed({
                 showCursor: false,
                 stringsElement: $('#typed-social'),
-                callback: function() {                    
-                
+                callback: function() {
+                    $('.typed-cursor').css("display","none");
+                    $('.social_container').css("display", "block");
                 }
             })
         }
