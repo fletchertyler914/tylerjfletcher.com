@@ -10,7 +10,7 @@
 .row {
     height: 100% !important;
     overflow: scroll;
-
+    overflow-x: hidden;
 }
 
 .profileContainer {
@@ -76,13 +76,13 @@
         border-bottom: 2px solid #000;
         height: 400px;
     }
-    
+
     .profileImageContainer {
         margin-left: 0px;
         position: static;
         background-position: center;
     }
-    
+
     .profileText {
         float: right;
         margin-top: 0;
@@ -90,18 +90,18 @@
         width: auto;
         position: static;
     }
-    
+
     .bioContainer {
         margin-top: 0px;
         text-align: center;
     }
-    
+
     .bio {
         margin: 0 auto;
         margin-top: 5%;
-        padding: 20px;    
+        padding: 20px;
     }
-    
+
     .small_display {
         display: block;
     }
